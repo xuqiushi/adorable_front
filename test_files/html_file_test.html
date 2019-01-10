@@ -1,0 +1,28 @@
+{% extends 'xx.html' %}
+{% import "xx" as wtf %}
+{% block xxx%}
+    <div
+        id = "ids"
+        class="d-md-flex flex-md-equal pl-md-3"
+    >
+        <div>
+            <div>
+                <br>
+            </div>
+        </div>
+    </div>
+<script>
+var variant_page_data={{variant_page_data | tojson}}
+var app = new Vue({
+    el: '#ids',
+    data: {
+        testdata:""
+    },
+    methods: {
+        upload_data:function(){
+              console.log("test")
+            }
+    },
+})
+</script>
+{% endblock %}

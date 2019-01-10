@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      breakpoints_test
+    </title>
+  </head>
+  <body>
+    <div>
+      <p>
+        You could die if I punch you!（我这一拳下去你可能会死！）
+      </p>
+      <p id="demo">
+      </p>
+      <button type="button" onclick="actions()">
+       What can you do?
+      </button>
+    </div>
+  </body>
+  <script>
+    console.log("test1")
+    function TestEval(x, y){
+        return x+y
+    }
+    function TestFunc(z){
+        let c = TestEval(1, 2)
+        return z + c
+    }
+    function actions(){
+        document.getElementById("demo").innerHTML=("You can jump!")
+    }
+    console.log(TestFunc(3))
+  </script>
+</html>
