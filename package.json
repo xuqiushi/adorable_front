@@ -1,12 +1,15 @@
 {
-  "name": "breakpoints_eslint",
+  "name": "adorable_front",
   "version": "1.0.0",
-  "description": "demmo for breakpoints and eslint",
+  "description": "adorable_front",
   "scripts": {
-    "eslint": "eslint test_files/*.js test_files/*.vue",
-    "format-code": "prettier-eslint --write \"test_files/*.js\" \"test_files/*.vue\""
+    "main_layout_build": "webpack --progress --hide-modules --config build/webpack.config.js",
+    "main_layout_server": "DEBUG='express:*' webpack-dev-server --progress --config build/webpack.config.js",
+    "eslint": "eslint src/**/*.js src/**/test_files/*.vue",
+    "format-code": "prettier-eslint --write \"src/**/*.js\" \"src/**/*.vue\""
   },
-  "author": "qiushi.xu",
+  "author": "Xu Qiushi",
+  "license": "ISC",
   "devDependencies": {
     "ajv": "^5.5.2",
     "babel-eslint": "^10.0.1",
@@ -24,6 +27,5 @@
     "vue-eslint-parser": "^3.2.2"
   },
   "dependencies": {},
-  "license": "tutorial",
   "private": true
 }
