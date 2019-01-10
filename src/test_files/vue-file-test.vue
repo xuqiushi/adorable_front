@@ -3,7 +3,7 @@
 <template>
   <div 
     v-for = "a in test_data" 
-    class="test_attr"
+    class="test-attr"
   />
 </template>
 <script>
@@ -18,7 +18,7 @@ export default {
     }
   },
   methods: {
-    test_function() {
+    testFunction() {
       console.log('test_log')
     }
   }
