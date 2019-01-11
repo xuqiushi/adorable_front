@@ -1,6 +1,8 @@
 # vue风格
 1. 请查阅component、与views下的两个文件并查看注释内容。
-2. 请在views中创建一个vue文件引入component。
+2. 请在views中创建一个vue文件引入component，其中应包含：
++ 变量定义
++ v-for、v-if
 3. 运行eslint检查自己创建的文件，如果不报错则通过。
 请注意，语法检查不会检查vue文件名，不会区分大小驼峰
 1. 请我们将vue文件名统一使用大驼峰的方式命名

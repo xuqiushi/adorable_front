@@ -10,6 +10,26 @@
       :bind="componentProp"
       @click="testMethod()"
     />
+    <!--key属性在v-for的时候必须定义，有助于提高渲染速度-->
+    <div
+      v-for="(x, y) in testList"
+      :key="x+y"
+    />
+    <!--v-for 不要与v-if混用，会增加遍历次数，此时将testList用computed属性替代即可-->
+    <div
+      v-for="(x, y) in testList"
+      v-if="x === 1"
+      :key="x+y"
+    >
+      错误
+    </div>
+    <!--正确的做法是直接将筛选写成computed属性-->
+    <div
+      v-for="(x, y) in testListComputed"
+      :key="x+y"
+    >
+      正确
+    </div>
   </div>
 
 </template>
@@ -23,7 +43,20 @@ export default {
   data() {
     return {
       //变量名字用小驼峰
-      componentProp: ''
+      componentProp: '',
+      testList: [1, 2, 3]
+    }
+  },
+  computed: {
+    testListComputed: function() {
+      //变量定义的时候使用let与const，不要使用var，var会将变量暴漏到全局
+      let returnList = []
+      for (let i = 1; i < this.testList.length; i++) {
+        if (i === 1) {
+          returnList.push()
+        }
+      }
+      return this.testList
     }
   },
   methods: {
